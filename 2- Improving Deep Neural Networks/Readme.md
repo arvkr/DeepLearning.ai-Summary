@@ -266,13 +266,13 @@ _**Implementation tip**_: if you implement gradient descent, one of the steps to
     ```
     if W[l] = [1.5   0] 
               [0   1.5] (l != L because of different dimensions in the output layer)
-    Y' = W[L] [1.5  0]^(L-1) X = 1.5^L 	# which will be very large
+    Y' = W[L] [1.5  0]^(L-1) X = W[L](1.5^L * X) 	# which will be very large
               [0  1.5]
     ```
     ```
     if W[l] = [0.5  0]
               [0  0.5]
-    Y' = W[L] [0.5  0]^(L-1) X = 0.5^L 	# which will be very small
+    Y' = W[L] [0.5  0]^(L-1) X = W[L](0.5^L * X) 	# which will be very small
               [0  0.5]
     ```
 - The last example explains that the activations (and similarly derivatives) will be decreased/increased exponentially as a function of number of layers.
