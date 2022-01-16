@@ -684,10 +684,10 @@ Implications of L2-regularization on:
   - Taking the mean of a constant `b[l]` will eliminate the `b[l]`
 - So if you are using batch normalization, you can remove b[l] or make it always zero.
 - So the parameters will be `W[l]`, `beta[l]`, and `alpha[l]`.
-- Shapes:
+- Shapes (m - mini batch size):
   - `Z[l]       - (n[l], m)`
-  - `beta[l]    - (n[l], m)`
-  - `gamma[l]   - (n[l], m)`
+  - `beta[l]    - (n[l], 1)`
+  - `gamma[l]   - (n[l], 1)`
 
 ### Why does Batch normalization work?
 
